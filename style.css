@@ -7,3 +7,18 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
   color: #007BFF;
   transform: scale(1.1);
 }
+.nav a {
+  color: #000;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.nav a:hover {
+  color: #007BFF;
+  transform: scale(1.1);
+  text-shadow: 0 0 5px #007BFF;
+}
