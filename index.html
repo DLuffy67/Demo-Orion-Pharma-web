@@ -1,34 +1,176 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Orion Pharma</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
-    body { background-color: #fff; color: #1b3e8a; overflow-x: hidden; line-height: 1.6; }
-    header { background: #1b3e8a; color: white; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 10; }
-    header img { height: 50px; }
-    nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: 500; transition: transform 0.2s; }
-    nav a:hover { transform: scale(1.1); }
-    section { padding: 60px 40px; }
-    .hero { background: linear-gradient(120deg, #e6ecf7, #ffffff); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 80px 40px; }
-    .hero-text { max-width: 600px; animation: slideIn 1s ease-out; }
-    .hero img { max-width: 400px; animation: float 4s ease-in-out infinite; }
-    @keyframes slideIn { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
-    .section-title { font-size: 32px; font-weight: 700; margin-bottom: 20px; color: #1b3e8a; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-    .card { background: #f1f5ff; border-radius: 10px; padding: 20px; transition: transform 0.3s; }
-    .card:hover { transform: translateY(-5px); }
-    footer { background: #1b3e8a; color: white; text-align: center; padding: 40px; }
+    /* Reset & base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      color: #1b3e8a;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background: #1b3e8a;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    /* Nav styling with hover animation */
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      color: #00a2ff; /* slightly brighter blue */
+      transform: scale(1.1);
+      text-shadow: 0 0 8px #00a2ff;
+    }
+
+    /* Hero Section */
+    section.hero {
+      background: linear-gradient(120deg, #e6ecf7, #ffffff);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 80px 40px;
+    }
+
+    .hero-text {
+      max-width: 600px;
+      animation: slideIn 1s ease-out;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .hero-text h1:hover {
+      color: #007BFF;
+      transform: scale(1.1);
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .hero img {
+      max-width: 400px;
+      animation: float 4s ease-in-out infinite;
+      user-select: none;
+    }
+
+    /* Animations */
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    /* Section Titles */
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #1b3e8a;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      user-select: none;
+    }
+
+    .section-title:hover {
+      color: #007BFF;
+      transform: scale(1.05);
+    }
+
+    /* Grid for cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    /* Cards */
+    .card {
+      background: #f1f5ff;
+      border-radius: 10px;
+      padding: 20px;
+      transition: transform 0.3s;
+      cursor: default;
+      user-select: none;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 123, 255, 0.2);
+    }
+
+    /* Sections */
+    section {
+      padding: 60px 40px;
+    }
+
+    /* Footer */
+    footer {
+      background: #1b3e8a;
+      color: white;
+      text-align: center;
+      padding: 40px;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Orion Pharma Logo">
+    <img src="logo.png" alt="Orion Pharma Logo" />
     <nav>
       <a href="#about">About</a>
       <a href="#products">Products</a>
@@ -45,7 +187,7 @@
       <h1>Orion Pharma – Quality Never Ends</h1>
       <p>Innovative, accessible, and trusted pharmaceuticals from Bangladesh to the world.</p>
     </div>
-    <img src="hero-image.png" alt="Healthcare visual">
+    <img src="hero-image.png" alt="Healthcare visual" />
   </section>
 
   <section id="about">
@@ -90,7 +232,11 @@
 
   <section id="contact">
     <h2 class="section-title">Contact Us</h2>
-    <p>📍 Orion House, 153-154 Tejgaon I/A, Dhaka-1208<br>📧 info@orion-group.net<br>📞 +8802-8870912</p>
+    <p>
+      📍 Orion House, 153-154 Tejgaon I/A, Dhaka-1208<br />
+      📧 info@orion-group.net<br />
+      📞 +8802-8870912
+    </p>
   </section>
 
   <footer>
