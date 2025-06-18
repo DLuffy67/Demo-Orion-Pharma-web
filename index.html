@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orion Pharma</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+    body { background-color: #fff; color: #1b3e8a; overflow-x: hidden; line-height: 1.6; }
+    header { background: #1b3e8a; color: white; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 10; }
+    header img { height: 50px; }
+    nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: 500; transition: transform 0.2s; }
+    nav a:hover { transform: scale(1.1); }
+    section { padding: 60px 40px; }
+    .hero { background: linear-gradient(120deg, #e6ecf7, #ffffff); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 80px 40px; }
+    .hero-text { max-width: 600px; animation: slideIn 1s ease-out; }
+    .hero img { max-width: 400px; animation: float 4s ease-in-out infinite; }
+    @keyframes slideIn { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+    .section-title { font-size: 32px; font-weight: 700; margin-bottom: 20px; color: #1b3e8a; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .card { background: #f1f5ff; border-radius: 10px; padding: 20px; transition: transform 0.3s; }
+    .card:hover { transform: translateY(-5px); }
+    footer { background: #1b3e8a; color: white; text-align: center; padding: 40px; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Orion Pharma Logo">
+    <nav>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#manufacturing">Manufacturing</a>
+      <a href="#investors">Investors</a>
+      <a href="#careers">Careers</a>
+      <a href="#csr">CSR</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Orion Pharma – Quality Never Ends</h1>
+      <p>Innovative, accessible, and trusted pharmaceuticals from Bangladesh to the world.</p>
+    </div>
+    <img src="hero-image.png" alt="Healthcare visual">
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Us</h2>
+    <p>Founded in 1965 and renamed in 2010, Orion Pharma Ltd. is a pioneer in Bangladesh’s pharmaceutical industry. Part of Orion Group, it is a publicly traded company on both DSE & CSE and exports to over 30 countries worldwide.</p>
+  </section>
+
+  <section id="products">
+    <h2 class="section-title">Our Products</h2>
+    <div class="grid">
+      <div class="card"><h3>Alve</h3><p>Alverine Citrate – GI treatment</p></div>
+      <div class="card"><h3>Ambronil</h3><p>Ambroxol – respiratory aid</p></div>
+      <div class="card"><h3>Amiron</h3><p>Mirtazapine – mental health</p></div>
+      <div class="card"><h3>Axet</h3><p>Cefuroxime Axetil – antibiotic</p></div>
+      <div class="card"><h3>Arovent</h3><p>Montelukast – respiratory</p></div>
+    </div>
+  </section>
+
+  <section id="manufacturing">
+    <h2 class="section-title">Manufacturing & R&D</h2>
+    <p>We operate a 27-acre state-of-the-art plant at Siddhirganj. Our facilities meet international standards such as US FDA, EU, UK MHRA, and WHO-GMP. Orion Infusion Ltd. supports large-volume parenterals and IV solutions.</p>
+  </section>
+
+  <section id="investors">
+    <h2 class="section-title">Investors</h2>
+    <p>Orion Pharma Ltd. is a listed company with strong financial performance and market presence. The parent Orion Group handles power, real estate, cosmetics, and more – a testament to our diversified stability.</p>
+  </section>
+
+  <section id="careers">
+    <h2 class="section-title">Careers</h2>
+    <p>Join a growing pharmaceutical leader in Bangladesh. We offer careers in R&D, QA, manufacturing, and global marketing. Be part of a legacy of healthcare innovation.</p>
+  </section>
+
+  <section id="csr">
+    <h2 class="section-title">CSR & Sustainability</h2>
+    <div class="grid">
+      <div class="card"><h4>Imatinib Donation</h4><p>Free cancer treatment for over 100 CML patients via EPAP.</p></div>
+      <div class="card"><h4>Scholarships</h4><p>Funding for underprivileged medical students nationwide.</p></div>
+      <div class="card"><h4>Disaster Relief</h4><p>Support during Rana Plaza collapse, factory fires & more.</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <p>📍 Orion House, 153-154 Tejgaon I/A, Dhaka-1208<br>📧 info@orion-group.net<br>📞 +8802-8870912</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Orion Pharma Ltd. All rights reserved.</p>
+  </footer>
+</body>
+</html>
